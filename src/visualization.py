@@ -14,7 +14,7 @@ def save(fig_name):
     plt.savefig(os.path.join(FIG_DIR, fig_name), dpi=300)
     plt.close()
 
-# ---------- Scatter + Regression Plots ----------
+# Scatter / Regression Plots
 
 def plot_kd_vs_engagement(df):
     plt.figure(figsize=(8, 5))
@@ -44,7 +44,7 @@ def plot_kd_vs_hs(df):
     plt.title("KD Ratio vs Headshot %")
     save("kd_vs_hs.png")
 
-# ---------- Correlation Heatmap ----------
+# Correlation Heatmap
 
 def plot_correlation_heatmap(df):
     numeric_cols = ["kills", "deaths", "assists", "kd_ratio", "hs_percent", "score", "total_engagements", "win"]
@@ -54,7 +54,7 @@ def plot_correlation_heatmap(df):
     plt.title("Correlation Heatmap")
     save("correlation_heatmap.png")
 
-# ---------- Win Distribution ----------
+#  Win Distribution
 
 def plot_win_distribution(df):
     plt.figure(figsize=(6, 4))
@@ -80,7 +80,7 @@ def plot_win_vs_hs(df):
     plt.title("Headshot % Distribution by Match Outcome")
     save("win_vs_hs.png")
 
-# ---------- Agent / Map Analysis ----------
+# Agent / Map Analysis 
 
 def plot_agent_winrate(df):
     agent_stats = df.groupby("agent")["win"].mean().sort_values(ascending=False)
@@ -102,7 +102,7 @@ def plot_map_winrate(df):
     plt.title("Win Rate by Map")
     save("map_vs_winrate.png")
 
-# ---------- Engagement Analysis ----------
+#  Engagement Analysis
 
 def plot_engagement_histogram(df):
     plt.figure(figsize=(8, 5))
