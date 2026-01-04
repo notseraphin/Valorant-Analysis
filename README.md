@@ -76,6 +76,14 @@ Valorant-Project/
 - Rolling averages smooth match-to-match variance and expose consistency
 This project emphasizes data analysis methodology, not gameplay coaching.
 
+***Analysis***
+
+Match-level Valorant performance data was analyzed to study player consistency, agent usage, and temporal performance trends. Time-series analysis of K/D ratios revealed substantial short-term variance but clear medium-term performance trends when smoothed using rolling averages. K/D was derived to be the most and only correlative individual preformence metric in predicting winrate.
+
+Agent-level analysis showed distinct performance differences across agents, indicating that agent choice plays a measurable role in match outcomes beyond raw mechanical skill. Usage frequency distributions highlighted player preference stability over time, while performance-by-agent comparisons identified agents with higher average impact.
+
+The results demonstrate how match telemetry can be transformed into interpretable performance metrics, enabling objective evaluation of improvement, consistency, and playstyle tendencies over extended match histories.
+
 ***Technologies Used***
 - Python
   - pandas
